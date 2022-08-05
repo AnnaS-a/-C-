@@ -10,7 +10,7 @@ Console.WriteLine("Введите первое целое число: ");
 int num1 = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Введите второе целое число: ");
-int num2 = int.Parse(Console.ReadLine());
+int num2 = Convert.ToInt32(Console.ReadLine());
 
 if (num1 == num2 * num2)
 {
