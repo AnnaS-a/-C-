@@ -12,9 +12,9 @@ int num1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите второе целое число: ");
 int num2 = int.Parse(Console.ReadLine());
 
-if (num2 == num1 * num1)
+if (num1 == num2 * num2)
 {
-    Console.Write($"Верно, квадрат {num1} = {num2}");
+    Console.Write($"Верно, {num1} = квадрат {num2}");
 }
 else 
 {
