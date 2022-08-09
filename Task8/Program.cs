@@ -2,11 +2,23 @@
 // 69 -> не кратно, 
 // 161 -> кратно
 
+// Console.WriteLine("Введите число ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// if (number % 7 == 0 && number % 23 == 0)
+// {
+//      Console.WriteLine($"Число {number} кратно числам 7 и 23");
+// }
+// else Console.WriteLine($"Число {number} не кратно 7 и 23");
+
+// Другой вариант
+
 Console.WriteLine("Введите число ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number % 7 == 0 && number % 23 == 0)
+bool Multip (int num, int a, int b)
 {
-     Console.WriteLine($"Число {number} кратно числам 7 и 23");
+    return num % a == 0 && num % b == 0;
 }
-else Console.WriteLine($"Число {number} не кратно 7 и 23");
+if (Multip (number, 7, 23)) Console.WriteLine($"{number} -> Кратно 7 и 23");
+else Console.WriteLine($"{number} -> Не кратно 7 и 23");
