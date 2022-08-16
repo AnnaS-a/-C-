@@ -5,18 +5,20 @@
 // 89126 -> 5
 
 Console.WriteLine("Веедите число ");
-int num = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 
-int NumCount(int number)
+
+int NumCount(int num)
 {
     int count = 0;
-    for (int i = 1; number > 0; i++)
+    if (num == 0) return 1;
+    while (num > 0)
     {
-        number = number / 10;
-        count = i;
+        count++;
+        num = num / 10;
     }
     return count;
 }
 
-int res = NumCount(num);
-Console.WriteLine($"Количество цифр в числе {num} = {res}");
+Console.WriteLine($"Количество цифр в числе {number} = {NumCount(number)}");
+
