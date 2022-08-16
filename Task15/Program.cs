@@ -19,6 +19,5 @@ int NumCount(int num)
     }
     return count;
 }
-
-Console.WriteLine($"Количество цифр в числе {number} = {NumCount(number)}");
-
+int res = NumCount(number);
+Console.WriteLine($"Количество цифр в числе {number} = {res}");
