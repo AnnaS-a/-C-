@@ -5,6 +5,7 @@
 // положительных чисел равна 29, сумма отрицательных равна
 // -20.
  
+
 Console.Clear();
 
 int[] CreateArrayRndInt(int size, int min, int max)
@@ -18,14 +19,18 @@ int[] CreateArrayRndInt(int size, int min, int max)
     return array;
 }
 
-int[] ReplacePosElemArray(int[] array)
+int[] GetSumPosNegElem(int[] array)
 {
+    int sumNeg = 0;
+    int sumPos = 0;
+
     for (int i = 0; i < array.Length; i++)
     {
-       if (array[i] > 0) array[i] = - array[i];
+       if (array[i] < 0) sumNeg += array[i];
+       else sumPos += array[i];
     }
 
-    return array;
+    return new int[] {sumPos, sumNeg};
 }
 
 void PrintArray(int[] array)
@@ -42,13 +47,6 @@ void PrintArray(int[] array)
 int[] arr = CreateArrayRndInt(12, -9, 9);
 
 PrintArray(arr);
-PrintArray(ReplacePosElemArray(arr));
-
-
-
-
-
-
-
-
-
+int[] sumPosNegElem = GetSumPosNegElem(arr);
+Console.WriteLine($"Cумма отрицательных равна: {sumPosNegElem[0]}");
+Console.WriteLine($"Cумма положительных равна: {sumPosNegElem[1]}");
